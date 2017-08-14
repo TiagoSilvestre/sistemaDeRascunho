@@ -1,0 +1,9 @@
+.loginform{
+    max-width: 770px;
+    margin: auto;
+    padding-top: 5%;
+}
+
+#texto_ifr{
+    height:300px!important;
+}

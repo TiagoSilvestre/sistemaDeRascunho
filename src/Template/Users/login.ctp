@@ -1,3 +1,5 @@
+<?= $this->element('topbar'); ?>
+
 <div class="users form">
 <?= $this->Flash->render() ?>
 <?= $this->Form->create() ?>

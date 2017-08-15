@@ -1,14 +1,13 @@
 <header>
     <nav>
         <div class="nav-wrapper">
-            <a href="/meusistema/estudos" class="brand-logo">Hello Tiago!</a>
             
+            <?= $this->Html->link('Draft', ['controller' => 'Estudos', 'action' => 'index'], array('class' => 'brand-logo')); ?>
+
             <ul class="right hide-on-med-and-down">
-                <li><a href="/meusistema/estudos">Estudos</a></li>
-                <li><a href="/meusistema/estudos/add">AddEstudos</a></li>
-
+                <li><?= $this->Html->link('Estudos', ['controller' => 'Estudos', 'action' => 'index']); ?></li>
+                <li><?= $this->Html->link('AddEstudos', ['controller' => 'Estudos', 'action' => 'add']); ?></li>
                 <li><?= $this->Html->link('SAIR **', ['controller' => 'Users', 'action' => 'logout']); ?></li>
-
             </ul>
         </div>
     </nav>

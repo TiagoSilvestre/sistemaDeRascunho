@@ -7,6 +7,9 @@
         <?= $this->Form->control('role', [
             'options' => ['admin' => 'Admin', 'author' => 'Author']
         ]) ?>
+        <?= $this->Form->hidden('created') ?>
+        <?= $this->Form->hidden('modified') ?>
+
    </fieldset>
 <?= $this->Form->button(__('Submit')); ?>
 <?= $this->Form->end() ?>

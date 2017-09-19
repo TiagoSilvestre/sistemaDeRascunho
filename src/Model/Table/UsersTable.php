@@ -17,7 +17,10 @@ class UsersTable extends Table
             ->add('role', 'inList', [
                 'rule' => ['inList', ['admin', 'author']],
                 'message' => 'Please enter a valid role'
-            ]);
+            ])
+            ->notEmpty('created', 'A password is required')
+            ->notEmpty('modified', 'A password is required')
+            ;
     }
 
 }

@@ -4,7 +4,7 @@
 if(isset($erro)){echo $erro;}
 ?>
 <div>
-    <form method="post" accept-charset="utf-8" enctype="multipart/form-data" action="/meusistema/estudos/add" class="container">
+    <form method="post" accept-charset="utf-8" enctype="multipart/form-data" action="/webdraft/estudos/add" class="container">
         <div style="display:none;">
             <input type="hidden" name="_method" value="POST"/>
         </div>    
@@ -27,7 +27,7 @@ if(isset($erro)){echo $erro;}
                 <div class="campofile">
                     <div class="input file required inputFile">
                         <span>Imagem</span>
-                        <input type="file" name="imagem" required="required" id="imagem">
+                        <input type="file" name="imagem" id="imagem">
                     </div>
                 </div>
             </div>

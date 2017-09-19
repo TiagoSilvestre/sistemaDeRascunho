@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\Event\Event;
+use Cake\ORM\TableRegistry;
 
 class EstudosController extends AppController {
 
@@ -13,10 +14,15 @@ class EstudosController extends AppController {
 
     public function add() {
         $addestudo = $this->Estudos->newEntity();
+        $this->set('addestudo', $addestudo);
+
 
         if ($this->request->is('post')) {
             $name = $this->request->data['imagem']['name'];
             $tmpName = $this->request->data['imagem']['tmp_name'];
+
+            $data = $this->Estudos->newEntity($this->request->data);
+            $this->redirectSave($data);
 
             try {
                 $this->uploadImg($tmpName, $name);
@@ -28,7 +34,7 @@ class EstudosController extends AppController {
                 return;
             }
         }
-        $this->set('addestudo', $addestudo);
+        
     }
 
     public function uploadImg($tmpName, $name) {
